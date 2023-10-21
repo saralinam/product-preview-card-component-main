@@ -1,0 +1,248 @@
+/*
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Dark cyan: hsl(158, 36%, 37%)
+- Cream: hsl(30, 38%, 92%)
+
+### Neutral
+
+- Very dark blue: hsl(212, 21%, 14%)
+- Dark grayish blue: hsl(228, 12%, 48%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 14px
+
+### Font
+
+- Family: [Montserrat](https://fonts.google.com/specimen/Montserrat)
+- Weights: 500, 700
+
+- Family: [Fraunces](https://fonts.google.com/specimen/Fraunces)
+- Weights: 700
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,700&family=Outfit:wght@400;700&display=swap');
+
+.attribution {
+    font-size: 11px; 
+    text-align: center; 
+   }
+ .attribution a {
+    color: hsl(228, 45%, 44%); 
+   }
+
+:root {
+    font-size: 14px;
+  
+ --bg-color: hsl(30, 38%, 92%);
+ --primary-color:  hsl(158, 36%, 37%);
+
+    --clr-primary-btn: hsl(158, 36%, 37%);
+    --clr-primary-btn-hv: hsl(158, 36%, 20%);
+    --clr-secondary-bgc: hsl(30, 38%, 92%);
+    
+    --clr-neutral-900: hsl(212, 21%, 14%);
+    --clr-neutral-400: hsl(228, 12%, 48%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    
+    --ff-accent: "Fraunces", serif;
+    --ff-base: "Montserrat", sans-serif;
+    
+    --fw-regular: 500;
+    --fw-bold: 700;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html{
+    font-size: 1rem;
+}
+
+main {
+min-height: 100vh;
+width: 100vw;
+display: flex;
+align-items: center;
+justify-content: space-between;
+background-color: var(--clr-neutral-100);
+flex-direction: column;
+
+}
+
+.container {
+    margin: 10rem 0;
+    max-width: 37.5rem;
+    width:90%;
+    display: flex;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border: 0.1rem solid #ebdddf;
+    box-shadow: 0  0.2rem  1rem black;
+    height: 25rem;
+    /* margin:35px auto;
+    padding: 0 35px; */
+}
+
+.left-side{
+    background: url("images/image-product-desktop.jpg");
+     
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 50%;
+}
+.right-side{
+    padding: 1.8rem 2rem;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+    height: 100%;
+    width: 50%;
+}
+
+.right-side .perfume_category{
+    text-transform: uppercase;
+    color: var(--clr-neutral-400);
+    letter-spacing: 0.35rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+.right-side .perfume_title{
+    font-family: "Fraunces", serif;
+    color: var(--clr-neutral-900);
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.4rem;
+}
+
+.right-side p{
+    font-size: 0.9rem;
+    color: var(--clr-neutral-400);
+    line-height: 1.4rem;
+}
+
+.price{
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+.price .current-price{
+    font-family: "Fraunces", serif;
+    color: var(--clr-primary-btn);
+    font-size: 2.5rem;
+}
+
+.price .old-price{
+    text-decoration: line-through;
+    color: var(--clr-neutral-400);
+    padding-left: 20px;
+    font-size: 0.8rem;
+}
+
+
+
+.button{
+    display: flex;
+    color: white;
+    background-color: var(--clr-primary-btn);
+    padding: 1rem 1.6rem;
+    border: none;
+    gap: 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    transition: background-color .4s ease;
+    align-items: center;
+}
+
+.button:hover{
+    background-color: var(--clr-primary-btn-hv);
+}
+
+.button img {
+    padding-right: 0.5rem;
+    z-index: 2;
+}
+
+.button span{
+    z-index: 2;
+}
+
+@media(max-width: 375px) {
+    html{
+        font-size: 15px;
+    }
+   
+    .container{
+        display: flex;
+        flex-direction: column;
+        height: 60rem;
+        
+    }
+  
+    .left-side{
+        background: url("images/image-product-mobile.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+    }
+
+    .right-side .perfume_category{
+        text-transform: uppercase;
+        color: var(--clr-neutral-400);
+        letter-spacing: 0.35rem;
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+    .right-side .perfume_title{
+        font-family: "Fraunces", serif;
+        color: var(--clr-neutral-900);
+        font-size: 1.4rem;
+        font-weight: 700;
+        line-height: 1.4rem;
+    }
+    
+    .right-side p{
+        font-size: 1rem;
+        color: var(--clr-neutral-400);
+        line-height: 1.4rem;
+        
+    }
+    main{
+        align-items: center;
+        margin: 0;
+    }
+
+    .button{
+      
+        position: relative;
+        cursor: pointer;
+        transition: background-color .4s ease;
+    
+    }
+}
