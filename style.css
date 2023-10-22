@@ -38,6 +38,7 @@ The designs were created to the following widths:
     display:flex;
     font-size: 0.8rem; 
     text-align: center; 
+    margin-top: 1em;
    }
  .attribution a {
     color: hsl(228, 45%, 44%); 
@@ -70,7 +71,7 @@ body{
     align-items:center;
      justify-content: center; 
      flex-direction: column;
-   
+     min-height: 100vh;
     }
 
 *{
@@ -84,7 +85,7 @@ html{
     font-size: 1rem;
 }
 
-main {
+/* main {
 width: 100vw;
 display: flex;
 align-items: center;
@@ -92,26 +93,22 @@ justify-content: space-between;
 background-color: var(--clr-neutral-100);
 flex-direction: column;
 
-}
+} */
 
 .container {
-    margin: 8rem 2rem 2rem;
-    max-width: 37.5rem;
-    width:90%;
     display: flex;
     border-radius: 0.5rem;
     overflow: hidden;
     border: 0.1rem solid #ebdddf;
     box-shadow: 0  0.2rem  1rem black;
     height: 25rem;
-    /* margin:35px auto;
-    padding: 0 35px; */
+    max-width: 520px;
 }
 
 .left-side{
     background: url("images/image-product-desktop.jpg");
      
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
     width: 50%;
@@ -216,7 +213,6 @@ flex-direction: column;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        height: 30rem;
         width: 100%;
     }
 
