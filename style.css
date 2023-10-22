@@ -35,7 +35,8 @@ The designs were created to the following widths:
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,700&family=Outfit:wght@400;700&display=swap');
 
 .attribution {
-    font-size: 11px; 
+    display:flex;
+    font-size: 0.8rem; 
     text-align: center; 
    }
  .attribution a {
@@ -64,6 +65,14 @@ The designs were created to the following widths:
 
 }
 
+body{ 
+    display:flex; 
+    align-items:center;
+     justify-content: center; 
+     flex-direction: column;
+   
+    }
+
 *{
     margin: 0;
     padding: 0;
@@ -76,7 +85,6 @@ html{
 }
 
 main {
-min-height: 100vh;
 width: 100vw;
 display: flex;
 align-items: center;
@@ -87,7 +95,7 @@ flex-direction: column;
 }
 
 .container {
-    margin: 10rem 0;
+    margin: 8rem 2rem 2rem;
     max-width: 37.5rem;
     width:90%;
     display: flex;
